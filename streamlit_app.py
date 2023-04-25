@@ -7,13 +7,13 @@ st.text('Kale, Spinach & Rocket Smoothie')
 st.text('Hard-Boiled Free-Range Egg')
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt",header=None)
+my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt", header=None)
 st.dataframe(my_fruit_list)
 
 # Let's put a pick list here so they can pick the fruit they want to include 
 st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # Display the table on the page.
-my_fruit_list = my_fruit_list.set_index('Fruit')
+my_fruit_list = my_fruit_list.set_index(0)
 
-st.multiselect("Pick some fruits",my_fruit_list.set_index('Fruit'),['Peach','Pineapple'])
+st.multiselect("Pick some fruits", my_fruit_list.index.tolist(), ['Peach', 'Pineapple'])

@@ -5,7 +5,7 @@ import snowflake.connector
 from urllib.error import URLError
 
 try:
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit)
+    #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+)
     # Define the breakfast menu
     st.header('Breakfast Menu')
     st.text('Omega 3 & Blueberry Oatmeal')

@@ -63,7 +63,7 @@ try:
             return my_cur.fetchall()
         
         
-     if stremlit.button("get fruit list"):
+    if stremlit.button("get fruit list"):
         my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
         my_data_row=get_list()
         st.dataframe(my_data_row)

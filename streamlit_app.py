@@ -21,6 +21,11 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 st.dataframe(fruityvice_normalized)
 
+
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+st.write('The user entered ', fruit_choice)
+
+
 # Let's put a pick list here so they can pick the fruit they want to include 
 # st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 

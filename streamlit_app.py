@@ -46,6 +46,8 @@ my_data_row = my_cur.fetchall()
 st.header("Loaded data from my_fruit_list:")
 st.dataframe(my_data_row)
 
+fruit_choice_2 = st.text_input('What is your second fruit choice?', 'Apple')
+st.write('The user entered', fruit_choice_2)
 # my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 # my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")

@@ -32,7 +32,7 @@ st.write('The user entered ', fruit_choice)
 
 # # Display the table on the page.
 # my_fruit_list = my_fruit_list.set_index(1)
-pip install snowflake-connector-python
+
 import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()

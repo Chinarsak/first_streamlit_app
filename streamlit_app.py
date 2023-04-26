@@ -26,7 +26,7 @@ try:
         reponse_return = fruityvice_response.json()
     except requests.exceptions.RequestException as e:
         reponse_return = "Error occurred: " + str(e)
-    return reponse_return 
+        return reponse_return 
 
 
     # Normalize the JSON response and display it in a dataframe

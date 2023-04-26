@@ -34,7 +34,7 @@ st.write('The user entered ', fruit_choice)
 # my_fruit_list = my_fruit_list.set_index(1)
 
 import snowflake.connector
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 st = my_cur.fetchone()

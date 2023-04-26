@@ -48,6 +48,10 @@ st.dataframe(my_data_row)
 
 fruit_choice_2 = st.text_input('What is your second fruit choice?', 'Apple')
 st.write('The user entered', fruit_choice_2)
+# Construct the SQL INSERT statement
+insert_stmt = "INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values('from streamlit'))
+# Execute the INSERT statement
+my_cur.execute(insert_stmt)
 # my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 # my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")

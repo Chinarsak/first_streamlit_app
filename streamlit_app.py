@@ -24,15 +24,15 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 st.dataframe(fruityvice_normalized)
 
 # Allow the user to select fruits for their smoothie
-fruits_selected = st.multiselect("Pick some fruits", my_fruit_list.index.tolist(), ['Peach', 'apple'])
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+#fruits_selected = st.multiselect("Pick some fruits", my_fruit_list.index.tolist(), ['Peach', 'apple'])
+#fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Allow the user to enter a fruit and display the input on the page
-fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
-st.write('The user entered ', fruit_choice)
+#fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
+#st.write('The user entered ', fruit_choice)
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-st.multiselect("Pick some fruits:", list(my_fruit_list.index))
+#st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # Establish a connection to Snowflake and execute a SQL query to fetch data from a table
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])

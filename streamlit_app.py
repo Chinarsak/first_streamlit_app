@@ -18,8 +18,12 @@ try:
 
     # Get information about a specific fruit from the Fruityvice API
     st.header("Fruityvice Fruit Advice!")
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-    st.text(fruityvice_response.json())
+    
+    def get_fruit(this_fruit):
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit)
+        reponse_return=st.text(fruityvice_response.json())
+    return reponse_return
+
 
     # Normalize the JSON response and display it in a dataframe
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())

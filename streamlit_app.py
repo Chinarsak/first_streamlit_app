@@ -42,7 +42,7 @@ my_data_row = my_cur.fetchone()
 st.text("Hello from Snowflake:")
 st.text(my_data_row)
 my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
-my_data_row = my_cur.fetchone()
+my_data_row = my_cur.fetchall()
 st.header("Loaded data from my_fruit_list:")
 st.dataframe(my_data_row)
 

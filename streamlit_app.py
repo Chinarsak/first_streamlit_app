@@ -21,9 +21,12 @@ try:
     st.header("Fruityvice Fruit Advice!")
     
     def get_fruit(this_fruit):
+    try:
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit)
-        reponse_return=st.text(fruityvice_response.json())
-        return reponse_return
+        reponse_return = fruityvice_response.json()
+    except requests.exceptions.RequestException as e:
+        reponse_return = "Error occurred: " + str(e)
+    return reponse_return 
 
 
     # Normalize the JSON response and display it in a dataframe

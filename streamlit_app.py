@@ -13,7 +13,7 @@ st.dataframe(my_fruit_list)
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
+st.text(fruityvice_response.json())
 st.header("Fruityvice Fruit Advice!")
 
 # Let's put a pick list here so they can pick the fruit they want to include 

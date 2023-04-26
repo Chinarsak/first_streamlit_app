@@ -24,7 +24,7 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 st.dataframe(fruityvice_normalized)
 
 # Allow the user to select fruits for their smoothie
-fruits_selected = st.multiselect("Pick some fruits", my_fruit_list.index.tolist(), ['Peach', 'Pineapple'])
+fruits_selected = st.multiselect("Pick some fruits", my_fruit_list.index.tolist(), ['Peach', 'apple'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Allow the user to enter a fruit and display the input on the page
@@ -41,7 +41,7 @@ my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 my_data_row = my_cur.fetchone()
 st.text("Hello from Snowflake:")
 st.text(my_data_row)
-my_cur.execute("SELECT * FROM my_fruit_list")
+my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 my_data_row = my_cur.fetchone()
 st.text("Loaded data from my_fruit_list:")
 st.text(my_data_row)

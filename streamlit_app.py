@@ -22,7 +22,7 @@ try:
     def get_fruit(this_fruit):
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit)
         reponse_return=st.text(fruityvice_response.json())
-    return reponse_return
+        return reponse_return
 
 
     # Normalize the JSON response and display it in a dataframe

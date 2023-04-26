@@ -37,7 +37,8 @@ try:
     # Allow the user to enter a fruit and display the input on the page
     fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
     st.write('The user entered ', fruit_choice)
-
+    back_fun=get_fruit(fruit_choice)
+    st.dataframe(back_fun)
     # Let's put a pick list here so they can pick the fruit they want to include 
     st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 

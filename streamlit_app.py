@@ -56,6 +56,17 @@ try:
     my_data_row = my_cur.fetchall()
     st.header("Loaded data from my_fruit_list:")
     st.dataframe(my_data_row)
+    
+    def get_list():
+        with my_cnx.cursor() as my_cur
+            my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
+            return my_cur.fetchall()
+        
+        
+     if stremlit.button("get fruit list")
+        my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
+        my_data_row=get_list()
+        st.dataframe(my_data_row)
 
     fruit_choice_2 = st.text_input('What is your second fruit choice?', 'Apple')
     st.write('The user entered', fruit_choice_2)
